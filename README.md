@@ -4,9 +4,9 @@ This project contains all the details on how to build Real Time Analytics Dashbo
 
 The real time dashboard displays live incoming clicks aggregated per second.
 
-You can completely build and run this project in AWS/On-Premise. You can run the spark streaming app on either your 
-on-premise hadoop/spark stand alone cluster, or on EMR. For ease of use and demonstration purpose, the spark app is 
-ran on EMR cluster and I installed zookeeper, kafka, cassandra, and dash on single EC2 instance.
+You can completely build and run this project in AWS/On-Premise. You can run the spark streaming app on  your 
+on-premise spark standalone cluster. For ease of use and demonstration purpose, the spark app is 
+ran on AWS cluster and I installed zookeeper, kafka, cassandra, and dash on single EC2 instance.
 
 ## Setup Instructions
 
@@ -14,7 +14,7 @@ ran on EMR cluster and I installed zookeeper, kafka, cassandra, and dash on sing
 * Follow instructions from kafka_setup.txt
 * Follow instructions from cassandra_setup.txt
 * Follow instructions from dash_setup.txt
-* Spin up an EMR(emr-5.15.0) cluster which has Hadoop & Spark(2.3)
+* Spin up AWS wtih Spark 2.3 cluster
 
 
 ## Real Time Data Flow
@@ -26,7 +26,7 @@ ran on EMR cluster and I installed zookeeper, kafka, cassandra, and dash on sing
 ## Usage
 
 * Run `sbt clean assembly` to build the jar
-* scp the jar to EC2 instance and EMR master node.
+* scp the jar to EC2 instance and AWS master node.
 
 
 ## Deployment
